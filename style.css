@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+header .header-top {
+  background: #808000;
+  display: flex;
+  align-items: center;
+  padding: .5rem 3%; }
+  header .header-top .contact-info {
+    display: flex; }
+    header .header-top .contact-info div:first-child {
+      margin-right: 1rem;
+      border-right: 1px solid black;
+      padding-right: 1rem; }
+    header .header-top .contact-info span {
+      white-space: nowrap; }
+  header .header-top .search-box {
+    margin-left: auto; }
+    header .header-top .search-box input[type=text] {
+      border: none;
+      padding: .3rem 0; }
+    header .header-top .search-box input[type=submit] {
+      padding: .25rem .2rem; }
+header nav {
+  font-family: 'Arimo', sans-serif;
+  font-size: 1.2rem;
+  background: #536170; }
+  header nav .hamburgerButton {
+    display: none; }
+  header nav ul {
+    display: flex;
+    align-items: center;
+    margin-left: 3%; }
+  header nav li {
+    list-style: none; }
+  header nav a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 1.7rem; }
+    header nav a:hover {
+      background: #3b4550; }
+  header nav .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #536170;
+    min-width: 16rem;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1; }
+  header nav .dropdown-content a {
+    color: white;
+    padding: 1.5rem 1.8rem;
+    text-decoration: none;
+    display: block;
+    text-align: left; }
+  header nav .dropdown-content a:hover {
+    background-color: #3b4550; }
+  header nav .dropdown:hover .dropdown-content {
+    display: block; }
+
+@media (max-width: 1000px) {
+  header nav ul li {
+    display: none; }
+  header nav .hamburgerButton {
+    display: flex;
+    align-items: center;
+    padding-left: 3%; }
+    header nav .hamburgerButton button {
+      display: inline-block;
+      padding: .4rem .5rem;
+      cursor: pointer;
+      margin-left: auto;
+      margin-right: 1.5rem; }
+  header nav ul {
+    display: block; }
+  header .toggleNav {
+    display: block; }
+  header .li-hide {
+    display: none; } }
+@media (max-width: 600px) {
+  header .header-top {
+    display: block;
+    text-align: center; }
+    header .header-top .contact-info {
+      justify-content: center;
+      padding: .4rem 0;
+      padding-bottom: .6rem; } }
+@media (max-width: 500px) {
+  header nav .hamburgerButton a {
+    padding: 1.2rem; }
+  header nav .hamburgerButton button {
+    padding: .2rem .3rem;
+    margin-right: .8rem; }
+  header nav ul li a {
+    padding: 1.2rem; }
+  header nav .dropdown-content {
+    min-width: 10rem; }
+  header nav .dropdown-content a {
+    padding: 1rem 1.3rem; } }
+
+/*# sourceMappingURL=style.css.map */
