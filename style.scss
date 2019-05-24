@@ -3,9 +3,13 @@
 	padding: 0;
 }
 
+// Variables
+$theme: #005d75;
+
 header{
 	.header-top{
-		background: #808000;
+		background: #003d4d;
+		color: silver;
 		display: flex;
 		align-items: center;
 		padding: .5rem 3%;
@@ -13,7 +17,7 @@ header{
 			display: flex;
 			div:first-child{
 				margin-right: 1rem;
-				border-right: 1px solid black;
+				border-right: 1px solid silver;
 				padding-right: 1rem;
 			}
 			span{
@@ -35,34 +39,54 @@ header{
 	nav{
 		font-family: 'Arimo', sans-serif;
 		font-size: 1.2rem;
-		background: #536170;
+		background: $theme;
+		height: 30rem;
 
 		.hamburgerButton{
 			display: none;
+		}
+		
+		.nav-items{
+			display: flex;
+			margin-left: 3%;
+			align-items: center;
+		}
+
+
+		.logo{
+			a{
+				font-family: 'Pacifico', cursive;
+				font-size: 4rem;
+				text-decoration: none;
+				color: black;
+			}
 		}
 
 		ul{
 			display: flex;
 			align-items: center;
-			margin-left: 3%;
+			margin-left: auto;
+			margin-right: 3%;
 		}
 		li{
 			list-style: none;
-		}
-		a{
-			text-decoration: none;
-			display: inline-block;
-			color: white;
-			padding: 1.7rem;
-			&:hover{
-				background: #3b4550;
+			a{
+				text-decoration: none;
+				display: inline-block;
+				color: white;
+				padding: 1.7rem;
+				&:hover{
+					border-bottom: 4px solid black;
+					padding-bottom: 1.5rem;
+				}
 			}
 		}
+		
 
 		.dropdown-content {
 		    display: none;
 		    position: absolute;
-		    background-color: #536170;
+		    background-color: $theme;
 		    min-width: 16rem;
 		    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		    z-index: 1;
@@ -74,11 +98,12 @@ header{
 		    text-decoration: none;
 		    display: block;
 		    text-align: left;
+		    &:hover{
+		    	padding-bottom: 1.25rem;
+		    }
 		}
 
-		.dropdown-content a:hover {
-			background-color: #3b4550;
-		}
+
 
 		.dropdown:hover .dropdown-content {
 		    display: block;
@@ -90,10 +115,10 @@ header{
 
 
 // Media Query Starts ============================================================
-@media(max-width: 1000px){
+@media(max-width: 700px){
 	header{
 		nav{
-			ul li{
+			ul li, .nav-items .logo{
 				display: none;
 			}
 			.hamburgerButton{
@@ -108,17 +133,11 @@ header{
 					margin-right: 1.5rem;
 				}
 			}
-			ul{
-				display: block;
-			}
 		}
 
 		.toggleNav{
 			display: block;
-		}
-
-		.li-hide{
-			display: none;
+			margin-right: auto;
 		}
 	}
 }
@@ -137,31 +156,31 @@ header{
 	}
 }
 
-@media(max-width: 500px){
+// @media(max-width: 500px){
 
-	header{
-		nav{
-			.hamburgerButton{
-				a{
-					padding: 1.2rem;
-				}
-				button{
-					padding: .2rem .3rem;
-					margin-right: .8rem;
-				}
-			}
+// 	header{
+// 		nav{
+// 			.hamburgerButton{
+// 				a{
+// 					padding: 1.2rem;
+// 				}
+// 				button{
+// 					padding: .2rem .3rem;
+// 					margin-right: .8rem;
+// 				}
+// 			}
 
-			ul li a{
-				padding: 1.2rem;
-			}
+// 			ul li a{
+// 				padding: 1.2rem;
+// 			}
 
-			.dropdown-content {
-			    min-width: 10rem;
-			}
+// 			.dropdown-content {
+// 			    min-width: 10rem;
+// 			}
 
-			.dropdown-content a {
-			    padding: 1rem 1.3rem;
-			}
-		}
-	}
-}
+// 			.dropdown-content a {
+// 			    padding: 1rem 1.3rem;
+// 			}
+// 		}
+// 	}
+// }

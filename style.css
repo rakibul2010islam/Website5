@@ -3,7 +3,8 @@
   padding: 0; }
 
 header .header-top {
-  background: #808000;
+  background: #003d4d;
+  color: silver;
   display: flex;
   align-items: center;
   padding: .5rem 3%; }
@@ -11,7 +12,7 @@ header .header-top {
     display: flex; }
     header .header-top .contact-info div:first-child {
       margin-right: 1rem;
-      border-right: 1px solid black;
+      border-right: 1px solid silver;
       padding-right: 1rem; }
     header .header-top .contact-info span {
       white-space: nowrap; }
@@ -25,26 +26,38 @@ header .header-top {
 header nav {
   font-family: 'Arimo', sans-serif;
   font-size: 1.2rem;
-  background: #536170; }
+  background: #005d75;
+  height: 30rem; }
   header nav .hamburgerButton {
     display: none; }
+  header nav .nav-items {
+    display: flex;
+    margin-left: 3%;
+    align-items: center; }
+  header nav .logo a {
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    text-decoration: none;
+    color: black; }
   header nav ul {
     display: flex;
     align-items: center;
-    margin-left: 3%; }
+    margin-left: auto;
+    margin-right: 3%; }
   header nav li {
     list-style: none; }
-  header nav a {
-    text-decoration: none;
-    display: inline-block;
-    color: white;
-    padding: 1.7rem; }
-    header nav a:hover {
-      background: #3b4550; }
+    header nav li a {
+      text-decoration: none;
+      display: inline-block;
+      color: white;
+      padding: 1.7rem; }
+      header nav li a:hover {
+        border-bottom: 4px solid black;
+        padding-bottom: 1.5rem; }
   header nav .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #536170;
+    background-color: #005d75;
     min-width: 16rem;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1; }
@@ -54,13 +67,13 @@ header nav {
     text-decoration: none;
     display: block;
     text-align: left; }
-  header nav .dropdown-content a:hover {
-    background-color: #3b4550; }
+    header nav .dropdown-content a:hover {
+      padding-bottom: 1.25rem; }
   header nav .dropdown:hover .dropdown-content {
     display: block; }
 
-@media (max-width: 1000px) {
-  header nav ul li {
+@media (max-width: 700px) {
+  header nav ul li, header nav .nav-items .logo {
     display: none; }
   header nav .hamburgerButton {
     display: flex;
@@ -72,12 +85,9 @@ header nav {
       cursor: pointer;
       margin-left: auto;
       margin-right: 1.5rem; }
-  header nav ul {
-    display: block; }
   header .toggleNav {
-    display: block; }
-  header .li-hide {
-    display: none; } }
+    display: block;
+    margin-right: auto; } }
 @media (max-width: 600px) {
   header .header-top {
     display: block;
@@ -86,17 +96,5 @@ header nav {
       justify-content: center;
       padding: .4rem 0;
       padding-bottom: .6rem; } }
-@media (max-width: 500px) {
-  header nav .hamburgerButton a {
-    padding: 1.2rem; }
-  header nav .hamburgerButton button {
-    padding: .2rem .3rem;
-    margin-right: .8rem; }
-  header nav ul li a {
-    padding: 1.2rem; }
-  header nav .dropdown-content {
-    min-width: 10rem; }
-  header nav .dropdown-content a {
-    padding: 1rem 1.3rem; } }
 
 /*# sourceMappingURL=style.css.map */
