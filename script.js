@@ -1,6 +1,23 @@
 var navButton = $('.hamburgerButton > button');
 
 navButton.click(function(){
-	$('nav > ul > li').toggleClass('toggleNav');
-	$('nav > ul > li:first-child').toggleClass('li-hide');
+	$('nav > div > ul').toggleClass('toggleNav');
+	$('nav > div > ul > li').toggleClass('toggleNav');
+});
+
+
+
+// For Adding more space above the cover image on the button click
+
+var x = 0;
+
+
+navButton.click(function(){
+	if(x === 0){
+		$('.photo').css('top', '31rem');
+		x = 1;
+	} else{
+		$('.photo').css('top', '11.5rem');
+		x = 0;
+	}
 })
