@@ -90,6 +90,28 @@ header nav {
   padding-top: 50%;
   border: 1.2rem solid white; }
 
+.mid {
+  margin: 0 4%;
+  margin-top: 24rem;
+  display: flex; }
+  .mid div {
+    margin: 1%; }
+  .mid .links-and-contact {
+    flex: 1; }
+  .mid .upcoming-events {
+    flex: 2; }
+  .mid .notices {
+    flex: 1; }
+  .mid .quick-links {
+    display: flex;
+    flex-direction: column; }
+    .mid .quick-links a {
+      text-decoration: none;
+      color: black;
+      margin: .1rem 0; }
+      .mid .quick-links a:hover {
+        text-decoration: underline; }
+
 @media (max-width: 700px) {
   header nav ul li, header nav .nav-items .logo {
     display: none; }
@@ -107,8 +129,8 @@ header nav {
     display: block;
     margin-right: auto; }
 
-  .photo-positioning {
-    top: 20rem; } }
+  .cover-photo-container .photo {
+    border: .8rem solid white; } }
 @media (max-width: 600px) {
   header .header-top {
     display: block;
@@ -116,6 +138,36 @@ header nav {
     header .header-top .contact-info {
       justify-content: center;
       padding: .4rem 0;
-      padding-bottom: .6rem; } }
+      padding-bottom: .6rem; }
+
+  .cover-photo-container .photo {
+    margin-top: 1.5rem; } }
+@media (max-width: 500px) {
+  header nav .logo a {
+    font-size: 3.3rem;
+    padding-bottom: 1.5rem;
+    margin-left: .8rem; }
+  header nav .hamburgerButton button {
+    padding: .25rem .35rem;
+    margin-right: 1.2rem; }
+  header nav li a {
+    padding: 1.4rem; }
+    header nav li a:hover {
+      border-bottom: 4px solid black;
+      padding-bottom: 1.15rem; }
+  header nav .dropdown-content {
+    min-width: 12rem; }
+  header nav .dropdown-content a {
+    padding: 1.2rem 1.5rem; }
+    header nav .dropdown-content a:hover {
+      padding-bottom: .95rem; }
+
+  .cover-photo-container .photo {
+    border: .5rem solid white;
+    margin-top: .8rem; } }
+@media (max-width: 342px) {
+  .cover-photo-container .photo {
+    border: .3rem solid white;
+    margin-top: 1.4rem; } }
 
 /*# sourceMappingURL=style.css.map */

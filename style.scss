@@ -133,6 +133,39 @@ header{
 }
 
 
+.mid{
+	margin: 0 4%;
+	margin-top: 24rem;
+	display: flex;
+	div{
+		margin: 1%;
+	}
+	.links-and-contact{
+		flex: 1;
+	}
+	.upcoming-events{
+		flex: 2;
+	}
+
+	.notices{
+		flex: 1;
+	}
+
+	.quick-links{
+		display: flex;
+		flex-direction: column;
+		a{
+			text-decoration: none;
+			color: black;
+			&:hover{
+				text-decoration: underline;
+			}
+			margin: .1rem 0;
+		}
+	}
+}
+
+
 
 
 // Media Query Starts ============================================================
@@ -162,8 +195,10 @@ header{
 		}
 	}
 
-	.photo-positioning{
-		top: 20rem;
+	.cover-photo-container{
+		.photo{
+			border: .8rem solid white;
+		}
 	}
 
 }
@@ -180,33 +215,70 @@ header{
 			}
 		}
 	}
+
+	.cover-photo-container{
+		.photo{
+			margin-top: 1.5rem;
+		}
+	}
 }
 
-// @media(max-width: 500px){
 
-// 	header{
-// 		nav{
-// 			.hamburgerButton{
-// 				a{
-// 					padding: 1.2rem;
-// 				}
-// 				button{
-// 					padding: .2rem .3rem;
-// 					margin-right: .8rem;
-// 				}
-// 			}
+@media(max-width: 500px){
 
-// 			ul li a{
-// 				padding: 1.2rem;
-// 			}
+	header{
+		nav{
+			.logo{
+				a{
+					font-size: 3.3rem;
+					padding-bottom:  1.5rem;
+					margin-left: .8rem;
+				}
+			}
 
-// 			.dropdown-content {
-// 			    min-width: 10rem;
-// 			}
+			.hamburgerButton{
+				button{
+					padding: .25rem .35rem;
+					margin-right: 1.2rem;
+				}
+			}
 
-// 			.dropdown-content a {
-// 			    padding: 1rem 1.3rem;
-// 			}
-// 		}
-// 	}
-// }
+			li a{
+				padding: 1.4rem;
+				&:hover{
+					border-bottom: 4px solid black;
+					padding-bottom: 1.15rem;
+				}
+			}
+
+			.dropdown-content {
+			    min-width: 12rem;
+			}
+
+			.dropdown-content a {
+			    padding: 1.2rem 1.5rem;
+			    &:hover{
+			    	padding-bottom: .95rem;
+			    }
+			}
+		}
+	}
+
+	.cover-photo-container{
+		.photo{
+			border: .5rem solid white;
+			margin-top: .8rem;
+		}
+	}
+
+}
+
+
+@media(max-width: 342px){
+	.cover-photo-container{
+		.photo{
+			border: .3rem solid white;
+			margin-top: 1.4rem;
+		}
+	}
+}
