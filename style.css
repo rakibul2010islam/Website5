@@ -92,26 +92,107 @@ header nav {
 
 .mid {
   margin: 0 4%;
-  margin-top: 24rem;
+  margin-top: 30%;
   display: flex; }
   .mid div {
-    margin: 1%; }
+    margin: 2%; }
+    .mid div:first-child {
+      margin-left: 1%; }
+    .mid div:last-child {
+      margin-right: 1%; }
   .mid .links-and-contact {
     flex: 1; }
   .mid .upcoming-events {
     flex: 2; }
   .mid .notices {
-    flex: 1; }
+    flex: 1;
+    display: flex;
+    flex-direction: column; }
+    .mid .notices a {
+      text-decoration: none;
+      color: tomato;
+      margin: .5rem 0; }
+      .mid .notices a:hover {
+        text-decoration: underline; }
+  .mid .w3-animate-bottom {
+    position: relative;
+    animation: animatebottom 5s; }
+@keyframes animatebottom {
+  from {
+    bottom: -120px;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
   .mid .quick-links {
     display: flex;
     flex-direction: column; }
     .mid .quick-links a {
       text-decoration: none;
       color: black;
-      margin: .1rem 0; }
+      margin: .2rem 0; }
       .mid .quick-links a:hover {
         text-decoration: underline; }
+  .mid .links-and-contact {
+    margin-top: 1.5%; }
+    .mid .links-and-contact div:last-child {
+      margin-top: 15%; }
+  .mid .upcoming-events a {
+    text-decoration: none; }
+  .mid .upcoming-events .event-1, .mid .upcoming-events .event-2 {
+    display: flex;
+    align-items: center; }
+    .mid .upcoming-events .event-1 div, .mid .upcoming-events .event-2 div {
+      flex-basis: 45%;
+      align-items: center; }
+  .mid .upcoming-events .event-image-1 {
+    background: url(img/university.jpg); }
+  .mid .upcoming-events .event-image-2 {
+    background: url(img/graduation.jpg); }
+  .mid .upcoming-events .events {
+    height: 10rem;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto; }
 
+footer {
+  background: #005d75; }
+  footer .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: .5rem; }
+    footer .footer-top .useful-links {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2%; }
+      footer .footer-top .useful-links a {
+        text-decoration: none;
+        color: black;
+        margin-top: .3rem;
+        margin-bottom: .3rem; }
+        footer .footer-top .useful-links a:hover {
+          text-decoration: underline; }
+      footer .footer-top .useful-links h3 {
+        margin-bottom: .8rem; }
+  footer .footer-bottom {
+    padding: 2% 0 .7rem 4%; }
+
+@media (max-width: 1050px) {
+  .mid {
+    flex-wrap: wrap; }
+    .mid .links-and-contact {
+      order: 2;
+      flex-basis: 45%; }
+    .mid .upcoming-events {
+      order: 1;
+      flex-basis: 60%; }
+    .mid .notices {
+      order: 3;
+      flex-basis: 45%; }
+
+  footer .footer-top div {
+    flex-basis: 45%; } }
 @media (max-width: 700px) {
   header nav ul li, header nav .nav-items .logo {
     display: none; }
@@ -164,7 +245,24 @@ header nav {
 
   .cover-photo-container .photo {
     border: .5rem solid white;
-    margin-top: .8rem; } }
+    margin-top: .8rem; }
+
+  .mid .upcoming-events .event-1, .mid .upcoming-events .event-2 {
+    flex-wrap: wrap; }
+    .mid .upcoming-events .event-1 div, .mid .upcoming-events .event-2 div {
+      flex-basis: 75%;
+      margin: 3% auto; }
+  .mid .links-and-contact {
+    order: 3;
+    flex-basis: 90%; }
+  .mid .notices {
+    order: 2;
+    flex-basis: 90%; }
+
+  footer .footer-top {
+    justify-content: center; }
+    footer .footer-top div {
+      flex-basis: 90%; } }
 @media (max-width: 342px) {
   .cover-photo-container .photo {
     border: .3rem solid white;
