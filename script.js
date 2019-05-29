@@ -1,3 +1,4 @@
+// For hiding and showing navbar
 var navButton = $('.hamburgerButton > button');
 
 navButton.click(function(){
@@ -21,3 +22,10 @@ navButton.click(function(){
 		x = 0;
 	}
 })
+
+
+// SetInterval for Animation Interval
+
+setInterval(function(){
+	$('.notices > a').toggleClass('w3-animate-bottom');
+}, 5000);
